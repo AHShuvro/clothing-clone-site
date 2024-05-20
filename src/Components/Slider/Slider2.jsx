@@ -4,7 +4,7 @@ import { Autoplay } from 'swiper/modules';
 
 const Slider2 = () => {
     return (
-        <div className='px-4'>
+        <div className='px-2'>
             <h3 className="text-4xl text-[#333333] font-bold text-center">Popular Collections</h3>
             <p className="text-lg text-[#777777] font-light text-center mt-2 mb-10">Visit our shop to see amazing creations from our designers.</p>
             <div className='px-0 xl:px-44'>
@@ -19,9 +19,9 @@ const Slider2 = () => {
                     modules={[Autoplay]}
                     breakpoints={{
                         0: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                         },
-                        576: {
+                        420: {
                             slidesPerView: 2,
                         },
                         768: {

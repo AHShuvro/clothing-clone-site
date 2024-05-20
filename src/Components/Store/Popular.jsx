@@ -2,7 +2,7 @@
 
 const Popular = () => {
     return (
-        <div className="px-4 sm:px-0">
+        <div className="px-2 sm:px-0">
             <h3 className="text-4xl text-[#333333] font-bold text-center">Popular Collections</h3>
             <p className="text-lg text-[#777777] font-light text-center mt-2 mb-10">Visit our shop to see amazing creations from our designers.</p>
             <div className='flex flex-col md:flex-row gap-2 w-full'>

@@ -1,7 +1,7 @@
 
 const Discover1 = () => {
     return (
-        <div className='flex flex-col md:flex-row gap-2 w-full mt-8 sm:mt-12 md:mt-24 px-4 sm:px-0'>
+        <div className='flex flex-col md:flex-row gap-2 w-full mt-8 sm:mt-12 md:mt-24 px-2 sm:px-0'>
             <div className="relative overflow-hidden group">
                 <img src="./image/14.webp" alt="" className="transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute top-6 left-8" />
