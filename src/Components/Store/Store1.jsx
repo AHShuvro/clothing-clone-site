@@ -7,7 +7,7 @@ const Store1 = () => {
             <div className='mt-24'>
                 <div className='flex flex-col items-center'>
                     <h3 className='text-4xl text-[#333333] font-bold mb-7'>Welcome to Store</h3>
-                    <ul className=" flex items-center justify-center gap-6 md:flex">
+                    <ul className=" grid grid-cols-2 sm:grid-cols-4 items-center justify-center gap-6 md:flex">
                         <li className="group flex text-xs cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
                             NEW ARRIVAL<span className="mt-[2px] h-[1px] w-[0px] rounded-full bg-[#48cab2] transition-all duration-300 group-hover:w-full"></span>
                         </li>
