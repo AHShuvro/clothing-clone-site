@@ -8,7 +8,7 @@ const Slider1 = () => {
         <>
 
 
-            <div className='px-2'>
+            <div className=''>
 
                 <div className='flex justify-between mt-[0.5rem] p-2 sm:p-0'>
 

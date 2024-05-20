@@ -4,7 +4,7 @@ import Popular from './Popular';
 const Store1 = () => {
     return (
         <>
-            <div className='mt-24'>
+            <div className=' mt-8 sm:mt-12 md:mt-24'>
                 <div className='flex flex-col items-center'>
                     <h3 className='text-4xl text-[#333333] font-bold mb-7'>Welcome to Store</h3>
                     <ul className=" grid grid-cols-2 sm:grid-cols-4 items-center justify-center gap-6 md:flex">
@@ -23,10 +23,10 @@ const Store1 = () => {
                     </ul>
                 </div>
 
-                <div className='mt-24'>
+                <div className=' mt-8 sm:mt-12 md:mt-24'>
                     <Popular />
                 </div>
-                <div className='mt-24 container mx-auto'>
+                <div className=' mt-8 sm:mt-12 md:mt-24 container mx-auto'>
                     <Slider2 />
                 </div>
             </div>

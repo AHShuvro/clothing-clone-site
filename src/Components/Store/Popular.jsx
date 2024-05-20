@@ -2,7 +2,7 @@
 
 const Popular = () => {
     return (
-        <div>
+        <div className="px-4 sm:px-0">
             <h3 className="text-4xl text-[#333333] font-bold text-center">Popular Collections</h3>
             <p className="text-lg text-[#777777] font-light text-center mt-2 mb-10">Visit our shop to see amazing creations from our designers.</p>
             <div className='flex flex-col md:flex-row gap-2 w-full'>
@@ -15,7 +15,7 @@ const Popular = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-2 w-full md:w-1/2'>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-col sm:flex-row gap-2'>
                         <div className="relative overflow-hidden group">
                             <img src="./image/5.jpg" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                             <div className="absolute top-6 left-8" />
