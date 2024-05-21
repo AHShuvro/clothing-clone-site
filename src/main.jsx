@@ -5,18 +5,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 
 
-import Slider1 from './Components/Slider/Slider1.jsx';
-import Footer1 from './Components/Footer/Footer1.jsx';
-import Home1 from './Pages/Home1.jsx';
+
+import HomePage1 from './Pages/HomePage1.jsx';
+import ShopPage1 from './Pages/ShopPage1.jsx';
+import Collection1 from './Components/Collections/Collection1.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Home1 />} />
-        <Route path="/S" element={<Slider1 />}>
-          <Route path="accordion" element={<Footer1 />} />
+        <Route path="/" element={<HomePage1 />} />
+        <Route path="/shop" element={<ShopPage1 />}>
+          <Route path="a" element={<Collection1 />} />
         </Route>
+        <Route path="/page" element={<HomePage1 />} />
+        <Route path="/blog" element={<HomePage1 />} />
+        <Route path="/women" element={<HomePage1 />} />
+        <Route path="/men" element={<HomePage1 />} />
+        
       </Routes>
     </Router>
   </React.StrictMode>

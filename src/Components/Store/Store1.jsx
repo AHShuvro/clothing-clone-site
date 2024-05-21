@@ -23,7 +23,7 @@ const Store1 = () => {
                     </ul>
                 </div>
 
-                <div className=' mt-8 sm:mt-12 md:mt-24'>
+                <div className=' mt-8 sm:mt-12 md:mt-16'>
                     <Popular />
                 </div>
                 <div className=' mt-8 sm:mt-12 md:mt-24 container mx-auto'>

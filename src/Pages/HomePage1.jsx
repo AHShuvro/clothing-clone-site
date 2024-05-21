@@ -5,7 +5,7 @@ import Navbar1 from "../Components/Navbar/Navbar1"
 import Slider1 from "../Components/Slider/Slider1"
 import Store1 from "../Components/Store/Store1"
 
-function Home1() {
+function HomePage1() {
 
     return (
         <>
@@ -20,4 +20,4 @@ function Home1() {
     )
 }
 
-export default Home1
+export default HomePage1;
