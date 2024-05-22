@@ -5,7 +5,7 @@ const Collection1 = () => {
             <h3 className='text-4xl text-[#333333] font-bold mb-10 text-center'>Collections</h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/19.jpg" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/19.jpg" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -16,7 +16,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/20.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/20.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -27,7 +27,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/21.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/21.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -38,7 +38,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/22.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/22.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -49,7 +49,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/19.jpg" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/19.jpg" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -60,7 +60,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/20.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/20.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -71,7 +71,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/21.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/21.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
@@ -82,7 +82,7 @@ const Collection1 = () => {
                     </div>
                 </div>
                 <div className="relative overflow-hidden group">
-                    <img src="../../../public/image/22.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
+                    <img src="/image/22.webp" alt="" className="transform transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                         <div className='px-6 py-1 bg-[#FFFFFF] hover:bg-[#333333] group text-[#333] hover:text-[#FFFFFF]'>
                             <h2 className="text-xl font-bold mt-1 flex flex-col ">
