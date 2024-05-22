@@ -37,8 +37,8 @@ const Slider2 = () => {
                 >
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/9.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/8.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/9.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/8.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>
@@ -81,8 +81,8 @@ const Slider2 = () => {
                     </SwiperSlide>
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/11.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/10.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/11.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/10.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>
@@ -125,8 +125,8 @@ const Slider2 = () => {
                     </SwiperSlide>
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/13.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/12.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/13.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/12.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>
@@ -169,8 +169,8 @@ const Slider2 = () => {
                     </SwiperSlide>
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/9.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/8.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/9.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/8.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>
@@ -213,8 +213,8 @@ const Slider2 = () => {
                     </SwiperSlide>
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/11.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/10.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/11.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/10.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>
@@ -257,8 +257,8 @@ const Slider2 = () => {
                     </SwiperSlide>
                     <SwiperSlide className='overflow-hidden group relative'>
                         <div className='w-full sm:max-w-[22.5rem] relative'>
-                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="./image/13.webp" alt="" />
-                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="./image/12.webp" alt="" />
+                            <img className='group-hover:opacity-0 transition-opacity duration-300' src="/image/13.webp" alt="" />
+                            <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300' src="/image/12.webp" alt="" />
                             <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
                             <div className='absolute bottom-2 left-2 right-2'>
                                 <div className='bg-slate-50 opacity-80 w-full h-full absolute top-0 left-0'></div>

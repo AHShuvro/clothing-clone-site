@@ -46,7 +46,7 @@ const Slider1 = () => {
                                 <h2 className='text-4xl font-bold mt-1 flex flex-col text-[#333333] hover:text-[#48CAB2] duration-200'>
                                     Need-it-Now <span className="mt-[2px] h-[2px] w-[0px] rounded-full bg-[#333333] hover:text-[#48CAB2] transition-all duration-300 group-hover:w-full"></span>
                                 </h2>
-                                <p className='text-lg mt-1 text-[#777777] font-light'>Contemporary. sophisticated. Versatile. Captivating</p>
+                                <p className='text-lg mt-1 text-[#777777] font-light text-center'>Contemporary. sophisticated. Versatile. Captivating</p>
                                 <div className="group mt-4">
                                     <div className="parent-div hover:opacity-100 transition-opacity duration-300">
                                         <button className="bg-[#48CAB2] px-4 py-2 hover:bg-[#333333] text-[#FFFFFF] font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
