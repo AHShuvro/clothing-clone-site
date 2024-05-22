@@ -46,10 +46,10 @@ const Navbar1 = () => {
                         <Link to={'/blog'}><li className="group flex text-sm lg:text-base cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
                             BLOG <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-[#48cab2] transition-all duration-300 group-hover:w-full"></span>
                         </li></Link>
-                        <Link to={'/collections/women'}><li className="group flex text-sm lg:text-base cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
+                        <Link to={'/womencollections/women'}><li className="group flex text-sm lg:text-base cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
                             WOMEN'S <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-[#48cab2] transition-all duration-300 group-hover:w-full"></span>
                         </li></Link>
-                        <Link to={'/collections/men'}><li className="group flex text-sm lg:text-base cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
+                        <Link to={'/mencollections/men'}><li className="group flex text-sm lg:text-base cursor-pointer flex-col text-[#333333] hover:text-[#48cab2] font-bold">
                             MEN'S <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-[#48cab2] transition-all duration-300 group-hover:w-full"></span>
                         </li></Link>
                     </ul>
