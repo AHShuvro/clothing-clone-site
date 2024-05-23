@@ -52,7 +52,7 @@ const Women1 = () => {
     return (
         <div className="drawer drawer-mobile">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content">
+            <div className="drawer-content flex justify-between mb-4 md:mb-6">
                 <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center mb-4 lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
                 <div className="flex items-center gap-2 pr-4">
                     <div className="flex gap-[1px] h-3 w-[10px] cursor-pointer" onClick={() => handleButtonClick('2')}>
