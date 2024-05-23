@@ -3,12 +3,33 @@ import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
 
 import { CiFilter } from "react-icons/ci";
+import { CiGrid2V } from "react-icons/ci";
 import WomenSlider1 from "../Slider/WomenSlider1";
 
 const Men1 = () => {
     const { men } = useContext(DataContext);
     const [loading, setLoading] = useState(true);
     const [filteredMenCollections, setFilteredMenCollections] = useState([]);
+
+    const [tab, setTab] = useState('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6');
+
+    const handleButtonClick = (buttonValue) => {
+        const tab = getTab(buttonValue);
+        setTab(tab);
+    };
+
+    const getTab = (value) => {
+        switch (value) {
+            case '2':
+                return 'grid grid-cols-1 sm:grid-cols-2 gap-6';
+            case '3':
+                return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6';
+            case '4':
+                return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6';
+            default:
+                return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6';
+        }
+    };
 
     useEffect(() => {
         setLoading(true);
@@ -34,8 +55,27 @@ const Men1 = () => {
         <div className="drawer drawer-mobile">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center mb-4 lg:hidden font-bold"><CiFilter className="text-2xl font-semibold" /> Filter</label>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+                <div className="flex justify-between mb-4 md:mb-6">
+                    <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
+                    <div className="flex items-center gap-2 pr-4">
+                        <div className="flex gap-[1px] h-3 w-[10px] cursor-pointer" onClick={() => handleButtonClick('2')}>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                        </div>
+                        <div className="flex gap-[1px] h-3 w-4 cursor-pointer" onClick={() => handleButtonClick('3')}>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                        </div>
+                        <div className="flex gap-[1px] h-3 w-5 cursor-pointer" onClick={() => handleButtonClick('4')}>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                            <div className="border border-[#777777] rounded-sm w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className={tab}>
                     {filteredMenCollections.map((item, idx) => (
                         <div key={idx} className='overflow-hidden group relative'>
                             <div className='w-full sm:max-w-[22.5rem] relative'>
