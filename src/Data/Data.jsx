@@ -1,7 +1,7 @@
 const collections = [
     {
-        image1: "https://source.unsplash.com/1200x540/?tshirt",
-        image2: "https://source.unsplash.com/1200x540/?tshirt,2",
+        image1: "https://source.unsplash.com/800x1026/?tshirt",
+        image2: "https://source.unsplash.com/800x1026/?tshirt,2",
         brand: "Nike",
         title: "Casual T-Shirt",
         price: 19.99,
@@ -9,8 +9,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?jeans",
-        image2: "https://source.unsplash.com/1200x540/?jeans,2",
+        image1: "https://source.unsplash.com/800x1026/?jeans",
+        image2: "https://source.unsplash.com/800x1026/?jeans,2",
         brand: "Levi's",
         title: "Denim Jeans",
         price: 49.99,
@@ -18,17 +18,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?dress",
-        image2: "https://source.unsplash.com/1200x540/?dress,2",
-        brand: "H&M",
-        title: "Summer Dress",
-        price: 39.99,
-        productType: "Dress",
-        gender: "Women"
-    },
-    {
-        image1: "https://source.unsplash.com/1200x540/?leatherjacket",
-        image2: "https://source.unsplash.com/1200x540/?leatherjacket,2",
+        image1: "https://source.unsplash.com/800x1026/?leatherjacket",
+        image2: "https://source.unsplash.com/800x1026/?leatherjacket,2",
         brand: "Zara",
         title: "Leather Jacket",
         price: 89.99,
@@ -36,8 +27,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?sneakers",
-        image2: "https://source.unsplash.com/1200x540/?sneakers,2",
+        image1: "https://source.unsplash.com/800x1026/?sneakers",
+        image2: "https://source.unsplash.com/800x1026/?sneakers,2",
         brand: "Adidas",
         title: "Sneakers",
         price: 59.99,
@@ -45,8 +36,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?sweater",
-        image2: "https://source.unsplash.com/1200x540/?sweater,2",
+        image1: "https://source.unsplash.com/800x1026/?sweater",
+        image2: "https://source.unsplash.com/800x1026/?sweater,2",
         brand: "Uniqlo",
         title: "Wool Sweater",
         price: 69.99,
@@ -54,8 +45,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?shirt",
-        image2: "https://source.unsplash.com/1200x540/?shirt,2",
+        image1: "https://source.unsplash.com/800x1026/?shirt",
+        image2: "https://source.unsplash.com/800x1026/?shirt,2",
         brand: "Tommy Hilfiger",
         title: "Formal Shirt",
         price: 29.99,
@@ -63,8 +54,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?chinos",
-        image2: "https://source.unsplash.com/1200x540/?chinos,2",
+        image1: "https://source.unsplash.com/800x1026/?chinos",
+        image2: "https://source.unsplash.com/800x1026/?chinos,2",
         brand: "Gap",
         title: "Chinos",
         price: 34.99,
@@ -72,8 +63,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?jacket",
-        image2: "https://source.unsplash.com/1200x540/?jacket,2",
+        image1: "https://source.unsplash.com/800x1026/?jacket",
+        image2: "https://source.unsplash.com/800x1026/?jacket,2",
         brand: "North Face",
         title: "Sports Jacket",
         price: 74.99,
@@ -81,8 +72,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?boots",
-        image2: "https://source.unsplash.com/1200x540/?boots,2",
+        image1: "https://source.unsplash.com/800x1026/?boots",
+        image2: "https://source.unsplash.com/800x1026/?boots,2",
         brand: "Dr. Martens",
         title: "Ankle Boots",
         price: 99.99,
@@ -90,8 +81,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?scarf",
-        image2: "https://source.unsplash.com/1200x540/?scarf,2",
+        image1: "https://source.unsplash.com/800x1026/?scarf",
+        image2: "https://source.unsplash.com/800x1026/?scarf,2",
         brand: "Gucci",
         title: "Silk Scarf",
         price: 149.99,
@@ -99,8 +90,8 @@ const collections = [
         gender: "Women"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?handbag",
-        image2: "https://source.unsplash.com/1200x540/?handbag,2",
+        image1: "https://source.unsplash.com/800x1026/?handbag",
+        image2: "https://source.unsplash.com/800x1026/?handbag,2",
         brand: "Prada",
         title: "Leather Handbag",
         price: 199.99,
@@ -108,8 +99,8 @@ const collections = [
         gender: "Women"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?sunglasses",
-        image2: "https://source.unsplash.com/1200x540/?sunglasses,2",
+        image1: "https://source.unsplash.com/800x1026/?sunglasses",
+        image2: "https://source.unsplash.com/800x1026/?sunglasses,2",
         brand: "Ray-Ban",
         title: "Aviator Sunglasses",
         price: 129.99,
@@ -117,8 +108,8 @@ const collections = [
         gender: "Unisex"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?coat",
-        image2: "https://source.unsplash.com/1200x540/?coat,2",
+        image1: "https://source.unsplash.com/800x1026/?coat",
+        image2: "https://source.unsplash.com/800x1026/?coat,2",
         brand: "Burberry",
         title: "Trench Coat",
         price: 299.99,
@@ -126,8 +117,8 @@ const collections = [
         gender: "Women"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?fleecejacket",
-        image2: "https://source.unsplash.com/1200x540/?fleecejacket,2",
+        image1: "https://source.unsplash.com/800x1026/?fleecejacket",
+        image2: "https://source.unsplash.com/800x1026/?fleecejacket,2",
         brand: "Patagonia",
         title: "Fleece Jacket",
         price: 89.99,
@@ -135,8 +126,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?hikingboots",
-        image2: "https://source.unsplash.com/1200x540/?hikingboots,2",
+        image1: "https://source.unsplash.com/800x1026/?hikingboots",
+        image2: "https://source.unsplash.com/800x1026/?hikingboots,2",
         brand: "Columbia",
         title: "Hiking Boots",
         price: 99.99,
@@ -144,8 +135,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?suit",
-        image2: "https://source.unsplash.com/1200x540/?suit,2",
+        image1: "https://source.unsplash.com/800x1026/?suit",
+        image2: "https://source.unsplash.com/800x1026/?suit,2",
         brand: "Calvin Klein",
         title: "Slim Fit Suit",
         price: 299.99,
@@ -153,8 +144,8 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?lingerie",
-        image2: "https://source.unsplash.com/1200x540/?lingerie,2",
+        image1: "https://source.unsplash.com/800x1026/?lingerie",
+        image2: "https://source.unsplash.com/800x1026/?lingerie,2",
         brand: "Victoria's Secret",
         title: "Lingerie Set",
         price: 59.99,
@@ -162,8 +153,8 @@ const collections = [
         gender: "Women"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?runningshorts",
-        image2: "https://source.unsplash.com/1200x540/?runningshorts,2",
+        image1: "https://source.unsplash.com/800x1026/?runningshorts",
+        image2: "https://source.unsplash.com/800x1026/?runningshorts,2",
         brand: "Under Armour",
         title: "Running Shorts",
         price: 24.99,
@@ -171,8 +162,17 @@ const collections = [
         gender: "Men"
     },
     {
-        image1: "https://source.unsplash.com/1200x540/?hoodie",
-        image2: "https://source.unsplash.com/1200x540/?hoodie,2",
+        image1: "https://source.unsplash.com/800x1026/?hoodie",
+        image2: "https://source.unsplash.com/800x1026/?hoodie,2",
+        brand: "Reebok",
+        title: "Training Hoodie",
+        price: 49.99,
+        productType: "Hoodie",
+        gender: "Men"
+    },
+    {
+        image1: "https://source.unsplash.com/800x1026/?hoodie",
+        image2: "https://source.unsplash.com/800x1026/?hoodie,2",
         brand: "Reebok",
         title: "Training Hoodie",
         price: 49.99,

@@ -35,14 +35,6 @@ const Navbar1 = () => {
             path: '/shop'
         },
         {
-            name: 'PAGE',
-            path: '/page'
-        },
-        {
-            name: 'BLOG',
-            path: '/blog'
-        },
-        {
             name: 'WOMEN\'S',
             path: '/womencollections/women'
         },
