@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
-import MenSlider1 from "../Slider/MenSlider1";
 import { CiFilter } from "react-icons/ci";
+import WomenSlider1 from "../Slider/WomenSlider1";
 
 const Women1 = () => {
     const { women, priceRange, vendor } = useContext(DataContext);
@@ -107,7 +107,7 @@ const Women1 = () => {
             <div className="drawer-side">
                 <label htmlFor="my-drawer" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content mt-16">
-                    <MenSlider1 />
+                    <WomenSlider1 />
                 </ul>
             </div>
         </div>
