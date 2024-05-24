@@ -56,7 +56,7 @@ const Navbar1 = () => {
         <div className='sticky top-0 z-10'>
             <nav className={`flex justify-between ${dropDownState ? 'h-screen w-screen bg-[#0005]' : 'flex items-center justify-between bg-[#FFFFFF] px-4 h-[4rem] shadow-lg'}`}>
                 <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-[#333333] transition-all duration-200 hover:scale-110">
-                    <h2>Logo</h2>
+                    <Link to={'/'}><h2>Logo</h2></Link>
                 </div>
                 <div className='hidden items-center justify-between gap-7 lg:gap-10 md:flex'>
                     <ul className="hidden items-center justify-between gap-7 lg:gap-10 md:flex">
