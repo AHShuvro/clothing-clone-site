@@ -1,16 +1,13 @@
 import { useContext, useState, useEffect } from "react";
 import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
-
+import MenSlider1 from "../Slider/MenSlider1";
 import { CiFilter } from "react-icons/ci";
-import WomenSlider1 from "../Slider/WomenSlider1";
-
 
 const Women1 = () => {
-    const { women } = useContext(DataContext);
+    const { women, priceRange, vendor } = useContext(DataContext);
     const [loading, setLoading] = useState(true);
-    const [filteredWomenCollections, setFilteredWomenCollections] = useState([]);
-
+    const [filteredMenCollections, setFilteredMenCollections] = useState([]);
     const [tab, setTab] = useState('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6');
 
     const handleButtonClick = (buttonValue) => {
@@ -26,6 +23,8 @@ const Women1 = () => {
                 return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6';
             case '4':
                 return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6';
+            default:
+                return 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6';
         }
     };
 
@@ -33,18 +32,27 @@ const Women1 = () => {
         setLoading(true);
 
         setTimeout(() => {
-            const womenCollections = collections.filter(item => item.gender === 'Women');
-            const filteredCollections = women === '' ? womenCollections : womenCollections.filter(item => item.productType === women);
+            let menCollections = collections.filter(item => item.gender === 'Women');
 
-            setFilteredWomenCollections(filteredCollections);
+            if (women) {
+                menCollections = menCollections.filter(item => item.productType === women);
+            }
+            if (priceRange) {
+                menCollections = menCollections.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1]);
+            }
+            if (vendor) {
+                menCollections = menCollections.filter(item => item.vendor === vendor);
+            }
+
+            setFilteredMenCollections(menCollections);
             setLoading(false);
         }, 300);
-    }, [women]);
+    }, [women, priceRange, vendor]);
 
     if (loading) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[50vh]">
-                <div className="w-10 h-10 animate-[spin_1s_linear_infinite] rounded-full border-4 border-r-transparent border-l-transparent border-sky-400"></div>
+                <div className="w-10 h-10 animate-spin rounded-full border-4 border-r-transparent border-l-transparent border-sky-400"></div>
             </div>
         );
     }
@@ -53,8 +61,8 @@ const Women1 = () => {
         <div className="drawer drawer-mobile">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-                <div className=" flex justify-between mb-4 md:mb-6">
-                    <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center mb-4 lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
+                <div className="flex justify-between mb-4 md:mb-6">
+                    <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
                     <div className="flex items-center gap-2 pr-4">
                         <div className="flex gap-[1px] h-3 w-[10px] cursor-pointer" onClick={() => handleButtonClick('2')}>
                             <div className="border border-[#777777] rounded-sm w-full h-full"></div>
@@ -74,7 +82,7 @@ const Women1 = () => {
                     </div>
                 </div>
                 <div className={tab}>
-                    {filteredWomenCollections.map((item, idx) => (
+                    {filteredMenCollections.map((item, idx) => (
                         <div key={idx} className='overflow-hidden group relative'>
                             <div className='w-full sm:max-w-[22.5rem] relative'>
                                 <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
@@ -87,9 +95,8 @@ const Women1 = () => {
                                     <p className='text-base text-[#333333] font-medium'>{item.title}</p>
                                 </div>
                                 <div className='flex items-center gap-6 mt-4'>
-                                    <span>icon</span>
                                     <div>
-                                        <p className='text-lg font-bold text-red-600'>${item.price.toFixed(2)}</p>
+                                        <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +107,7 @@ const Women1 = () => {
             <div className="drawer-side">
                 <label htmlFor="my-drawer" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content mt-16">
-                    <WomenSlider1 />
+                    <MenSlider1 />
                 </ul>
             </div>
         </div>

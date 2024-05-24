@@ -2,14 +2,12 @@ import { useContext, useState, useEffect } from "react";
 import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
 import MenSlider1 from "../Slider/MenSlider1";
-
 import { CiFilter } from "react-icons/ci";
 
 const Men1 = () => {
-    const { men } = useContext(DataContext);
+    const { men, priceRange, vendor } = useContext(DataContext);
     const [loading, setLoading] = useState(true);
     const [filteredMenCollections, setFilteredMenCollections] = useState([]);
-
     const [tab, setTab] = useState('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6');
 
     const handleButtonClick = (buttonValue) => {
@@ -34,13 +32,22 @@ const Men1 = () => {
         setLoading(true);
 
         setTimeout(() => {
-            const menCollections = collections.filter(item => item.gender === 'Men');
-            const filteredCollections = men === '' ? menCollections : menCollections.filter(item => item.productType === men);
+            let menCollections = collections.filter(item => item.gender === 'Men');
 
-            setFilteredMenCollections(filteredCollections);
+            if (men) {
+                menCollections = menCollections.filter(item => item.productType === men);
+            }
+            if (priceRange) {
+                menCollections = menCollections.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1]);
+            }
+            if (vendor) {
+                menCollections = menCollections.filter(item => item.vendor === vendor);
+            }
+
+            setFilteredMenCollections(menCollections);
             setLoading(false);
         }, 300);
-    }, [men]);
+    }, [men, priceRange, vendor]);
 
     if (loading) {
         return (
@@ -88,9 +95,8 @@ const Men1 = () => {
                                     <p className='text-base text-[#333333] font-medium'>{item.title}</p>
                                 </div>
                                 <div className='flex items-center gap-6 mt-4'>
-                                    <span>icon</span>
                                     <div>
-                                        <p className='text-lg font-bold text-red-600'>${item.price.toFixed(2)}</p>
+                                        <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
                                     </div>
                                 </div>
                             </div>
