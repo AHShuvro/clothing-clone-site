@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { collections } from '../../Data/Data';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DataContext } from '../../Context/DataProvider';
+import { RxCross2 } from "react-icons/rx";
 
 const WomenSlider1 = () => {
     const { women, setWomen, setPriceRange, setVendor } = useContext(DataContext);
+    const [price, setPrice] = useState('');
 
     const productTypes = [...new Set(collections.filter(item => item.gender === 'Women').map(item => item.productType))];
     const vendors = [...new Set(collections.filter(item => item.gender === 'Women').map(item => item.vendor))];
@@ -18,11 +20,25 @@ const WomenSlider1 = () => {
     ];
 
     const handlePriceFilter = (range) => {
-        setPriceRange(range);
+        if (range === '') {
+            setPriceRange('');
+            setPrice('');
+        } else {
+            setPriceRange(range);
+            setPrice(`$${range[0]} - $${range[1]}`);
+        }
     };
 
     const handleVendorFilter = (vendor) => {
         setVendor(vendor);
+    };
+
+    const handleProductTypeFilter = (e) => {
+        if (women === e) {
+            setWomen('');
+        } else {
+            setWomen(e);
+        }
     };
 
     return (
@@ -32,13 +48,34 @@ const WomenSlider1 = () => {
                 <Link to={'/womencollections/women'}><li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>Womens</li></Link>
                 <Link to={'/mencollections/men'}><li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>Mens</li></Link>
             </ul>
+            <h3 className={`text-[#191919] text-lg font-bold mt-8 mb-6 ${women || price ? '' : 'hidden'}`}>Shopping by:</h3>
+            <ul>
+                <div className={`${women ? '' : 'hidden'}`}>
+                    <p className='text-lg text-[#888888]'>Product Type:</p>
+                    <div className='flex items-center gap-1 pl-2'>
+                        <RxCross2 className='cursor-pointer' onClick={() => handleProductTypeFilter('')} />
+                        <li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] duration-300'>
+                            {women}
+                        </li>
+                    </div>
+                </div>
+                <div className={`${price ? '' : 'hidden'}`}>
+                    <p className='text-lg text-[#888888]'>Price:</p>
+                    <div className='flex items-center gap-1 pl-2'>
+                        <RxCross2 className='cursor-pointer' onClick={() => handlePriceFilter('')} />
+                        <li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] duration-300'>
+                            {price}
+                        </li>
+                    </div>
+                </div>
+            </ul>
             <h3 className='text-[#191919] text-lg font-bold mt-8 mb-2'>Product Type</h3>
             <ul>
                 {productTypes.map((productType, idx) => (
                     <li
                         key={idx}
-                        onClick={() => setWomen(productType)}
-                        className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>
+                        onClick={() => handleProductTypeFilter(productType)}
+                        className={`text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300 ${women === productType ? 'font-bold' : ''}`}>
                         {productType}
                     </li>
                 ))}
@@ -49,7 +86,7 @@ const WomenSlider1 = () => {
                     <li
                         key={idx}
                         onClick={() => handlePriceFilter(priceRange.range)}
-                        className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>
+                        className={`text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300`}>
                         {priceRange.label}
                     </li>
                 ))}

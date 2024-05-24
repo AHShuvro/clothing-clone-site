@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import { collections } from '../../Data/Data';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DataContext } from '../../Context/DataProvider';
+import { RxCross2 } from "react-icons/rx";
+
 
 const MenSlider1 = () => {
     const { men, setMen, setPriceRange, setVendor } = useContext(DataContext);
+    const [price, setPrice] = useState('');
 
     const productTypes = [...new Set(collections.filter(item => item.gender === 'Men').map(item => item.productType))];
     const vendors = [...new Set(collections.filter(item => item.gender === 'Men').map(item => item.vendor))];
@@ -18,11 +21,25 @@ const MenSlider1 = () => {
     ];
 
     const handlePriceFilter = (range) => {
-        setPriceRange(range);
+        if (range === '') {
+            setPriceRange('');
+            setPrice('');
+        } else {
+            setPriceRange(range);
+            setPrice(`$${range[0]} - $${range[1]}`);
+        }
     };
 
     const handleVendorFilter = (vendor) => {
         setVendor(vendor);
+    };
+
+    const handleProductTypeFilter = (productType) => {
+        if (men === productType) {
+            setMen('');
+        } else {
+            setMen(productType);
+        }
     };
 
     return (
@@ -32,13 +49,34 @@ const MenSlider1 = () => {
                 <Link to={'/womencollections/women'}><li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>Womens</li></Link>
                 <Link to={'/mencollections/men'}><li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>Mens</li></Link>
             </ul>
+            <h3 className={`text-[#191919] text-lg font-bold mt-8 mb-6 ${men || price ? '' : 'hidden'}`}>Shopping by:</h3>
+            <ul>
+                <div className={`${men ? '' : 'hidden'}`}>
+                    <p className='text-lg text-[#888888]'>Product Type:</p>
+                    <div className='flex items-center gap-1 pl-2'>
+                        <RxCross2 className='cursor-pointer' onClick={() => handleProductTypeFilter('')} />
+                        <li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] duration-300'>
+                            {men}
+                        </li>
+                    </div>
+                </div>
+                <div className={`${price ? '' : 'hidden'}`}>
+                    <p className='text-lg text-[#888888]'>Price:</p>
+                    <div className='flex items-center gap-1 pl-2'>
+                        <RxCross2 className='cursor-pointer' onClick={() => handlePriceFilter('')} />
+                        <li className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] duration-300'>
+                            {price}
+                        </li>
+                    </div>
+                </div>
+            </ul>
             <h3 className='text-[#191919] text-lg font-bold mt-8 mb-2'>Product Type</h3>
             <ul>
                 {productTypes.map((productType, idx) => (
                     <li
                         key={idx}
-                        onClick={() => setMen(productType)}
-                        className='text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300'>
+                        onClick={() => handleProductTypeFilter(productType)}
+                        className={`text-base text-[#888888] hover:text-[#48cab2] mb-[2px] cursor-pointer duration-300 ${men === productType ? 'font-bold' : ''}`}>
                         {productType}
                     </li>
                 ))}
