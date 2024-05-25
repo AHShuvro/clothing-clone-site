@@ -2,7 +2,8 @@ import { useContext, useState, useEffect } from "react";
 import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
 import MenSlider1 from "../Slider/MenSlider1";
-import { CiFilter } from "react-icons/ci";
+import { CiFilter, CiHeart } from "react-icons/ci";
+import Swal from "sweetalert2";
 
 const Men1 = () => {
     const { men, priceRange, vendor } = useContext(DataContext);
@@ -49,6 +50,31 @@ const Men1 = () => {
         }, 300);
     }, [men, priceRange, vendor]);
 
+    const handleAddToWishlist = (item) => {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const itemExists = wishlist.some(wishlistItem => wishlistItem.title === item.title);
+
+        if (!itemExists) {
+            wishlist.push(item);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Item added to wishlist!",
+                showConfirmButton: false,
+                timer: 800
+            });
+        } else {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "This item is already in your wishlist.",
+                showConfirmButton: false,
+                timer: 800
+            });
+        }
+    }
+
     if (loading) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[50vh]">
@@ -88,6 +114,7 @@ const Men1 = () => {
                                 <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
                                 <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />
                                 <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
+                                <CiHeart onClick={() => handleAddToWishlist(item)} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
                             </div>
                             <div className='flex flex-col mt-4'>
                                 <div>
