@@ -3,11 +3,12 @@ import { collections } from "../../Data/Data";
 import { DataContext } from "../../Context/DataProvider";
 import { CiFilter } from "react-icons/ci";
 import WomenSlider1 from "../Slider/WomenSlider1";
+import Swal from "sweetalert2";
 
 const Women1 = () => {
     const { women, priceRange, vendor } = useContext(DataContext);
     const [loading, setLoading] = useState(true);
-    const [filteredMenCollections, setFilteredMenCollections] = useState([]);
+    const [filteredWomenCollections, setFilteredWomenCollections] = useState([]);
     const [tab, setTab] = useState('grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6');
 
     const handleButtonClick = (buttonValue) => {
@@ -32,22 +33,47 @@ const Women1 = () => {
         setLoading(true);
 
         setTimeout(() => {
-            let menCollections = collections.filter(item => item.gender === 'Women');
+            let womenCollections = collections.filter(item => item.gender === 'Women');
 
             if (women) {
-                menCollections = menCollections.filter(item => item.productType === women);
+                womenCollections = womenCollections.filter(item => item.productType === women);
             }
             if (priceRange) {
-                menCollections = menCollections.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1]);
+                womenCollections = womenCollections.filter(item => item.price >= priceRange[0] && item.price <= priceRange[1]);
             }
             if (vendor) {
-                menCollections = menCollections.filter(item => item.vendor === vendor);
+                womenCollections = womenCollections.filter(item => item.vendor === vendor);
             }
 
-            setFilteredMenCollections(menCollections);
+            setFilteredWomenCollections(womenCollections);
             setLoading(false);
         }, 300);
     }, [women, priceRange, vendor]);
+
+    const handleAddToWishlist = (item) => {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const itemExists = wishlist.some(wishlistItem => wishlistItem.title === item.title);
+
+        if (!itemExists) {
+            wishlist.push(item);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Item added to wishlist!",
+                showConfirmButton: false,
+                timer: 800
+            });
+        } else {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "This item is already in your wishlist.",
+                showConfirmButton: false,
+                timer: 800
+            });
+        }
+    }
 
     if (loading) {
         return (
@@ -62,7 +88,7 @@ const Women1 = () => {
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <div className="flex justify-between mb-4 md:mb-6">
-                    <label htmlFor="my-drawer" className=" drawer-button flex gap-1 items-center lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
+                    <label htmlFor="my-drawer" className="drawer-button flex gap-1 items-center lg:hidden font-bold cursor-pointer"><CiFilter className="text-2xl font-semibold" /> Filter</label>
                     <div className="flex items-center gap-2 pr-4">
                         <div className="flex gap-[1px] h-3 w-[10px] cursor-pointer" onClick={() => handleButtonClick('2')}>
                             <div className="border border-[#777777] rounded-sm w-full h-full"></div>
@@ -82,8 +108,8 @@ const Women1 = () => {
                     </div>
                 </div>
                 <div className={tab}>
-                    {filteredMenCollections.map((item, idx) => (
-                        <div key={idx} className='overflow-hidden group relative'>
+                    {filteredWomenCollections.map((item, idx) => (
+                        <div onClick={() => handleAddToWishlist(item)} key={idx} className='overflow-hidden group relative'>
                             <div className='w-full sm:max-w-[22.5rem] relative'>
                                 <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
                                 <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />

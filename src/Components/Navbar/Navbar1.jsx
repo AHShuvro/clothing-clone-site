@@ -63,7 +63,7 @@ const Navbar1 = () => {
                     </ul>
                     <div className='flex gap-2'>
                         <CiSearch className='text-2xl font-bold' />
-                        <CiHeart className='text-2xl font-bold' />
+                        <Link to={'/wishlist'}><CiHeart className='text-2xl font-bold' /></Link>
                         <HiOutlineShoppingBag className='text-2xl font-bold' />
                     </div>
                 </div>
