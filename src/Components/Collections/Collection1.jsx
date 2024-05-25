@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { collections } from "../../Data/Data";
 
 const Collection1 = () => {
@@ -18,11 +19,13 @@ const Collection1 = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
 
                 {productTypes.map((item, idx) => (
-                    <div key={idx} className="product-type-item">
-                        <img src={`https://source.unsplash.com/800x1026/?${item}`} alt={item} className="h-72" />
-                        <h2 className="text-[#333333] text-xl font-bold text-center flex flex-col mt-3">{item}</h2>
-                        <p className="text-[#777777] text-center">{productTypeCounts[item]} products</p>
-                    </div>
+                    <Link key={idx} to={'/womencollections/women'}>
+                        <div className="product-type-item">
+                            <img src={`https://source.unsplash.com/800x1026/?${item}`} alt={item} className="h-72" />
+                            <h2 className="text-[#333333] text-xl font-bold text-center flex flex-col mt-3">{item}</h2>
+                            <p className="text-[#777777] text-center">{productTypeCounts[item]} products</p>
+                        </div>
+                    </Link>
                 ))}
 
             </div>

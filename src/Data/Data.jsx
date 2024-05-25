@@ -6,7 +6,8 @@ const collections = [
         title: "Casual T-Shirt",
         price: 19.99,
         productType: "T-Shirt",
-        gender: "Men"
+        gender: "Men",
+        id: 1,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?jeans",
@@ -15,7 +16,8 @@ const collections = [
         title: "Denim Jeans",
         price: 49.99,
         productType: "Jeans",
-        gender: "Men"
+        gender: "Men",
+        id: 2,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?leatherjacket",
@@ -24,7 +26,8 @@ const collections = [
         title: "Leather Jacket",
         price: 89.99,
         productType: "Jacket",
-        gender: "Men"
+        gender: "Men",
+        id: 3,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sneakers",
@@ -33,7 +36,8 @@ const collections = [
         title: "Sneakers",
         price: 59.99,
         productType: "Shoes",
-        gender: "Men"
+        gender: "Men",
+        id: 4,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sweater",
@@ -42,7 +46,8 @@ const collections = [
         title: "Wool Sweater",
         price: 69.99,
         productType: "Sweater",
-        gender: "Men"
+        gender: "Men",
+        id: 5,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?shirt",
@@ -51,7 +56,8 @@ const collections = [
         title: "Formal Shirt",
         price: 29.99,
         productType: "Shirt",
-        gender: "Men"
+        gender: "Men",
+        id: 6,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?chinos",
@@ -60,7 +66,8 @@ const collections = [
         title: "Chinos",
         price: 34.99,
         productType: "Pants",
-        gender: "Men"
+        gender: "Men",
+        id: 7,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?jacket",
@@ -69,7 +76,8 @@ const collections = [
         title: "Sports Jacket",
         price: 74.99,
         productType: "Jacket",
-        gender: "Men"
+        gender: "Men",
+        id: 8,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?boots",
@@ -78,7 +86,8 @@ const collections = [
         title: "Ankle Boots",
         price: 99.99,
         productType: "Boots",
-        gender: "Men"
+        gender: "Men",
+        id: 9,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?scarf",
@@ -87,7 +96,8 @@ const collections = [
         title: "Silk Scarf",
         price: 149.99,
         productType: "Scarf",
-        gender: "Women"
+        gender: "Women",
+        id: 10,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?handbag",
@@ -96,7 +106,8 @@ const collections = [
         title: "Leather Handbag",
         price: 199.99,
         productType: "Bag",
-        gender: "Women"
+        gender: "Women",
+        id: 11,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sunglasses",
@@ -105,7 +116,8 @@ const collections = [
         title: "Aviator Sunglasses",
         price: 129.99,
         productType: "Accessories",
-        gender: "Unisex"
+        gender: "Unisex",
+        id: 12,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?coat",
@@ -114,7 +126,8 @@ const collections = [
         title: "Trench Coat",
         price: 299.99,
         productType: "Coat",
-        gender: "Women"
+        gender: "Women",
+        id: 13,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?fleecejacket",
@@ -123,7 +136,8 @@ const collections = [
         title: "Fleece Jacket",
         price: 89.99,
         productType: "Jacket",
-        gender: "Men"
+        gender: "Men",
+        id: 14,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hikingboots",
@@ -132,7 +146,8 @@ const collections = [
         title: "Hiking Boots",
         price: 99.99,
         productType: "Boots",
-        gender: "Men"
+        gender: "Men",
+        id: 15,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?suit",
@@ -141,7 +156,8 @@ const collections = [
         title: "Slim Fit Suit",
         price: 299.99,
         productType: "Suit",
-        gender: "Men"
+        gender: "Men",
+        id: 16,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?lingerie",
@@ -150,7 +166,8 @@ const collections = [
         title: "Lingerie Set",
         price: 59.99,
         productType: "Lingerie",
-        gender: "Women"
+        gender: "Women",
+        id: 17,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?runningshorts",
@@ -159,7 +176,8 @@ const collections = [
         title: "Running Shorts",
         price: 24.99,
         productType: "Shorts",
-        gender: "Men"
+        gender: "Men",
+        id: 18,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hoodie",
@@ -168,7 +186,8 @@ const collections = [
         title: "Training Hoodie",
         price: 49.99,
         productType: "Hoodie",
-        gender: "Men"
+        gender: "Men",
+        id: 19,
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hoodie",
@@ -177,7 +196,8 @@ const collections = [
         title: "Training Hoodie",
         price: 49.99,
         productType: "Hoodie",
-        gender: "Men"
+        gender: "Men",
+        id: 20,
     }
 ];
 

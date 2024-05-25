@@ -14,6 +14,7 @@ import { DataProvider } from './Context/DataProvider.jsx';
 import WomenCollectionsPage1 from './Pages/WomenCollectionsPage1.jsx';
 import MenCollectionPage1 from './Pages/MenCollectionsPage1.jsx';
 import WishListPage from './Pages/WishListPage.jsx';
+import ProductDetailsPage from './Pages/ProductDetailsPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/blog" element={<HomePage1 />} />
           <Route path="/women" element={<HomePage1 />} />
           <Route path="/wishlist" element={<WishListPage />} />
+          <Route path="/productdetails/:id" element={<ProductDetailsPage />} />
           <Route path="/womencollections" element={<WomenCollectionsPage1 />}>
             <Route path="women" element={<Women1 />} />
           </Route>
