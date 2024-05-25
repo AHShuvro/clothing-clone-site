@@ -4,6 +4,7 @@ import { DataContext } from "../../Context/DataProvider";
 import MenSlider1 from "../Slider/MenSlider1";
 import { CiFilter, CiHeart } from "react-icons/ci";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Men1 = () => {
     const { men, priceRange, vendor } = useContext(DataContext);
@@ -109,25 +110,27 @@ const Men1 = () => {
                 </div>
                 <div className={tab}>
                     {filteredMenCollections.map((item, idx) => (
-                        <div key={idx} className='overflow-hidden group relative'>
-                            <div className='w-full sm:max-w-[22.5rem] relative'>
-                                <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
-                                <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />
-                                <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
-                                <CiHeart onClick={() => handleAddToWishlist(item)} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
-                            </div>
-                            <div className='flex flex-col mt-4'>
-                                <div>
-                                    <p className='text-xs text-[#777777] font-normal'>{item.brand}</p>
-                                    <p className='text-base text-[#333333] font-medium'>{item.title}</p>
+                        <Link to={`/productdetails/${item.id}`} key={idx}>
+                            <div className='overflow-hidden group relative'>
+                                <div className='w-full sm:max-w-[22.5rem] relative'>
+                                    <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
+                                    <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />
+                                    <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
+                                    <CiHeart onClick={() => handleAddToWishlist(item)} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
                                 </div>
-                                <div className='flex items-center gap-6 mt-4'>
+                                <div className='flex flex-col mt-4'>
                                     <div>
-                                        <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
+                                        <p className='text-xs text-[#777777] font-normal'>{item.brand}</p>
+                                        <p className='text-base text-[#333333] font-medium'>{item.title}</p>
+                                    </div>
+                                    <div className='flex items-center gap-6 mt-4'>
+                                        <div>
+                                            <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
