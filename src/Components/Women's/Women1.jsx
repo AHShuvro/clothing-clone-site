@@ -130,7 +130,7 @@ const Women1 = () => {
                                 <div className='w-full sm:max-w-[22.5rem] relative'>
                                     <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
                                     <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />
-                                    <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
+                                    <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE {item.sale}</p>
                                     <CiHeart onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleAddToWishlist(item); }} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
                                 </div>
                                 <div className='flex flex-col mt-4'>

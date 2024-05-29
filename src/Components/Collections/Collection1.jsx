@@ -21,7 +21,7 @@ const Collection1 = () => {
                 {productTypes.map((item, idx) => (
                     <Link key={idx} to={'/womencollections/women'}>
                         <div className="product-type-item">
-                            <img src={`https://source.unsplash.com/800x1026/?${item}`} alt={item} className="h-72" />
+                            <img src='/image/24.webp' alt={item} className="h-72" />
                             <h2 className="text-[#333333] text-xl font-bold text-center flex flex-col mt-3">{item}</h2>
                             <p className="text-[#777777] text-center">{productTypeCounts[item]} products</p>
                         </div>

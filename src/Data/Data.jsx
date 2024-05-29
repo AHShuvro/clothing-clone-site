@@ -8,6 +8,7 @@ const collections = [
         productType: "T-Shirt",
         gender: "Men",
         id: 1,
+        sale: '10%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?jeans",
@@ -18,6 +19,7 @@ const collections = [
         productType: "Jeans",
         gender: "Men",
         id: 2,
+        sale: '15%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?leatherjacket",
@@ -28,6 +30,7 @@ const collections = [
         productType: "Jacket",
         gender: "Men",
         id: 3,
+        sale: '20%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sneakers",
@@ -38,6 +41,7 @@ const collections = [
         productType: "Shoes",
         gender: "Men",
         id: 4,
+        sale: '25%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sweater",
@@ -48,6 +52,7 @@ const collections = [
         productType: "Sweater",
         gender: "Men",
         id: 5,
+        sale: '30%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?shirt",
@@ -58,6 +63,7 @@ const collections = [
         productType: "Shirt",
         gender: "Men",
         id: 6,
+        sale: '5%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?chinos",
@@ -68,6 +74,7 @@ const collections = [
         productType: "Pants",
         gender: "Men",
         id: 7,
+        sale: '8%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?jacket",
@@ -78,6 +85,7 @@ const collections = [
         productType: "Jacket",
         gender: "Men",
         id: 8,
+        sale: '12%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?boots",
@@ -88,6 +96,7 @@ const collections = [
         productType: "Boots",
         gender: "Men",
         id: 9,
+        sale: '18%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?scarf",
@@ -98,6 +107,7 @@ const collections = [
         productType: "Scarf",
         gender: "Women",
         id: 10,
+        sale: '22%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?handbag",
@@ -108,6 +118,7 @@ const collections = [
         productType: "Bag",
         gender: "Women",
         id: 11,
+        sale: '25%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?sunglasses",
@@ -118,6 +129,7 @@ const collections = [
         productType: "Accessories",
         gender: "Unisex",
         id: 12,
+        sale: '10%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?coat",
@@ -128,6 +140,7 @@ const collections = [
         productType: "Coat",
         gender: "Women",
         id: 13,
+        sale: '30%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?fleecejacket",
@@ -138,6 +151,7 @@ const collections = [
         productType: "Jacket",
         gender: "Men",
         id: 14,
+        sale: '15%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hikingboots",
@@ -148,6 +162,7 @@ const collections = [
         productType: "Boots",
         gender: "Men",
         id: 15,
+        sale: '20%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?suit",
@@ -158,6 +173,7 @@ const collections = [
         productType: "Suit",
         gender: "Men",
         id: 16,
+        sale: '35%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?lingerie",
@@ -168,6 +184,7 @@ const collections = [
         productType: "Lingerie",
         gender: "Women",
         id: 17,
+        sale: '10%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?runningshorts",
@@ -178,6 +195,7 @@ const collections = [
         productType: "Shorts",
         gender: "Men",
         id: 18,
+        sale: '18%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hoodie",
@@ -188,6 +206,7 @@ const collections = [
         productType: "Hoodie",
         gender: "Men",
         id: 19,
+        sale: '25%',
     },
     {
         image1: "https://source.unsplash.com/800x1026/?hoodie",
@@ -198,6 +217,7 @@ const collections = [
         productType: "Hoodie",
         gender: "Men",
         id: 20,
+        sale: '25%',
     }
 ];
 
