@@ -78,7 +78,7 @@ const ShoppingCart1 = () => {
                 {totalCart.length > 0 && (
                     <div>
                         <p className="text-right text-lg font-bold mt-4">Total: ${totalPrice.toFixed(2)}</p>
-                        <button className='text-[#FFFFFF] font-bold px-4 w-full py-2 mt-2 rounded-md text-center bg-[#88DCCD]'>Continue Shoping</button>
+                        <button className='text-[#FFFFFF] font-bold px-4 w-full py-2 mt-2 rounded-md text-center bg-[#88DCCD]'>PROCEED TO CHECKOUT</button>
                     </div>
                 )}
             </div>
