@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { CiHeart, CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
+import ShopingCart1 from '../ShopingCart/ShopingCart1';
 
 const Navbar1 = () => {
     const [dropDownState, setDropDownState] = useState(false);
@@ -44,6 +45,8 @@ const Navbar1 = () => {
         },
     ];
 
+
+
     return (
         <div className='sticky top-0 z-10'>
             <nav className={`flex justify-between ${dropDownState ? 'h-screen w-screen bg-[#0005]' : 'flex items-center justify-between bg-[#FFFFFF] px-4 h-[4rem] shadow-lg'}`}>
@@ -64,13 +67,29 @@ const Navbar1 = () => {
                     <div className='flex gap-2'>
                         <CiSearch className='text-2xl font-bold' />
                         <Link to={'/wishlist'}><CiHeart className='text-2xl font-bold' /></Link>
-                        <HiOutlineShoppingBag className='text-2xl font-bold' />
+
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="">
+                                <HiOutlineShoppingBag className='text-2xl font-bold' />
+                            </div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 bg-base-100 mt-4 shadow w-80">
+                                <ShopingCart1 />
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="relative flex transition-transform md:hidden">
                     <div className='flex gap-2 pr-5'>
                         <CiSearch className='text-2xl font-bold' />
-                        <HiOutlineShoppingBag className='text-2xl font-bold' />
+
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="">
+                                <HiOutlineShoppingBag className='text-2xl font-bold' />
+                            </div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 bg-base-100 mt-4 shadow w-64">
+                                <ShopingCart1 />
+                            </ul>
+                        </div>
                     </div>
                     <svg
                         ref={dropDownMenuRef}

@@ -75,6 +75,23 @@ const Women1 = () => {
             });
         }
     }
+    const handleAddToCart = (item) => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Item added to cart!",
+            showConfirmButton: false,
+            timer: 800
+        });
+    }
+
+    const handleReload = () => {
+        window.location.reload();
+    };
 
     if (loading) {
         return (
@@ -116,7 +133,7 @@ const Women1 = () => {
                                     <img className='group-hover:opacity-0 transition-opacity duration-600' src='/image/24.webp' alt={item.title} />
                                     <img className='absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600' src='/image/23.webp' alt={item.title} />
                                     <p className='text-xs text-white bg-red-600 font-bold p-1 absolute top-2 left-2'>SALE 13%</p>
-                                    <CiHeart onClick={() => handleAddToWishlist(item)} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
+                                    <CiHeart onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleAddToWishlist(item); }} className='absolute top-2 right-3 text-2xl text-[#777777] cursor-pointer' />
                                 </div>
                                 <div className='flex flex-col mt-4'>
                                     <div>
@@ -128,9 +145,11 @@ const Women1 = () => {
                                             <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
                                         </div>
                                     </div>
+                                    <button onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleAddToCart(item); handleReload();}} className="bg-teal-600 mt-2 px-4 py-1 text-white font-medium">ADD TO CART</button>
                                 </div>
                             </div>
                         </Link>
+
                     ))}
                 </div>
             </div>

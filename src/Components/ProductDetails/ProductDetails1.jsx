@@ -8,11 +8,10 @@ const ProductDetails1 = () => {
         <div className='flex'>
 
             <div className='container mx-auto px-2 sm:px-0 xl:px-44 mb-8 sm:mb-12 md:mb-24 mt-8 sm:mt-12 md:mt-24 flex flex-col items-center'>
-                <h3 className='text-4xl text-[#333333] font-bold mb-10 text-center'>Collections</h3>
                 <div className='flex flex-col md:flex-row gap-12'>
                     <div className='w-full md:w-1/2'>
                         <div>
-                            <img src={product.image1} alt="" />
+                            <img src='/image/24.webp' alt="" />
                         </div>
                     </div>
                     <div className=' w-full md:w-1/2'>
@@ -26,8 +25,8 @@ const ProductDetails1 = () => {
                         <div className='mt-4'>
                             <p className='text-base mt-4'>Color: <span className='font-bold'>White</span></p>
                             <div className='flex gap-1'>
-                                <img className='w-11 h-11 rounded-full' src={product.image1} alt="" />
-                                <img className='w-11 h-11 rounded-full' src={product.image2} alt="" />
+                                <img className='w-11 h-11 rounded-full' src='/image/24.webp' alt="" />
+                                <img className='w-11 h-11 rounded-full' src='/image/23.webp' alt="" />
                             </div>
                         </div>
                     </div>
