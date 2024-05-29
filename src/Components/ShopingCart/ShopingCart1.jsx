@@ -57,7 +57,7 @@ const ShoppingCart1 = () => {
                         totalCart.map((item, idx) => (
                             <div key={idx}>
                                 <div className="flex space-x-4 py-4">
-                                    <img className="w-1/3" src={item.image1} alt="" />
+                                    <img className="w-1/3" src='/image/24.webp' alt="" />
                                     <div>
                                         <p>{item.title}</p>
                                         <p>color</p>

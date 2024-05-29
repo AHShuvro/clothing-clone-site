@@ -91,9 +91,6 @@ const Men1 = () => {
         });
     }
 
-    const handleReload = () => {
-        window.location.reload();
-    };
 
     if (loading) {
         return (
@@ -147,7 +144,7 @@ const Men1 = () => {
                                             <p className='text-lg font-bold text-red-600 '>${item.price.toFixed(2)}</p>
                                         </div>
                                     </div>
-                                    <button onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleAddToCart(item); handleReload(); }} className="bg-teal-600 mt-2 px-4 py-1 text-white font-medium">ADD TO CART</button>
+                                    <button onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleAddToCart(item); }} className="bg-teal-600 mt-2 px-4 py-1 text-white font-medium">ADD TO CART</button>
                                 </div>
                             </div>
                         </Link>
